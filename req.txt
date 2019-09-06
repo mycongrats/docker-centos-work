@@ -1,0 +1,7 @@
+CherryPy==15.0.0
+cmd2==0.8.5
+Fabric==1.14.0
+pexpect==4.5.0
+pycrypto==2.6.1
+requests==2.18.4
+python-jenkins==1.4.0
