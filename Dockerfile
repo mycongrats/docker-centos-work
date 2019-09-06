@@ -9,7 +9,7 @@ RUN yum install -y epel-release
 RUN yum install -y svn git gcc g++ python2-pip python-devel which cronie lsof vim zip unzip \
     && yum clean all
 
-RUN pip install -r /root/req.txt \
+RUN pip install -r /root/req.txt --no-cache-dir \
     && echo vim.cnf >> /etc/vimrc \
     && rm -rf /root/req.txt \
     && rm -rf /root/vim.cnf
