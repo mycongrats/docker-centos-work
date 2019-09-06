@@ -10,6 +10,6 @@ RUN yum install -y svn git gcc g++ python2-pip python-devel which cronie lsof vi
     && yum clean all
 
 RUN pip install -r /root/req.txt --no-cache-dir \
-    && cat vim.cnf >> /etc/vimrc \
+    && cat /root/vim.cnf >> /etc/vimrc \
     && rm -rf /root/req.txt \
     && rm -rf /root/vim.cnf
