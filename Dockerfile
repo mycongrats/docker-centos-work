@@ -12,4 +12,5 @@ RUN yum install -y svn git gcc gcc-c++ make python2-pip python-devel which croni
 RUN pip install -r /root/req.txt --no-cache-dir \
     && cat /root/vim.cnf >> /etc/vimrc \
     && rm -rf /root/req.txt \
-    && rm -rf /root/vim.cnf
+    && rm -rf /root/vim.cnf \
+    && sed -i '$ a export HISTTIMEFORMAT="%F %T `whoami` "' /etc/bashrc
